@@ -1,0 +1,23 @@
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore directories
+node_modules/
+
+# Ignorar entorno virtual
+env/
+venv/
+
+#ignorar cache de python
+__pycache__/
+*.pyc
