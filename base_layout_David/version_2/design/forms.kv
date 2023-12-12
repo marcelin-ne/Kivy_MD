@@ -81,7 +81,7 @@ Screen:
                         mode: "rectangle"
                         width: "250dp"
                         height: "50dp"
-                        font_size: "5sp" 
+                        font_size: "15sp" 
                         icon_left: "car-brake-low-pressure"
                         hint_text: "Presión de entrada de la turbina kPa"
                         icon_right_color_focus: "orange"
@@ -95,7 +95,7 @@ Screen:
                         mode: "rectangle"
                         width: "250dp"
                         height: "50dp"
-                        font_size: "5sp" 
+                        font_size: "15sp" 
                         icon_left: "engine-outline"
                         hint_text: "Presión de extracción kPa"
                         icon_right_color_focus: "orange"
@@ -108,7 +108,7 @@ Screen:
                         mode: "rectangle"
                         width: "245dp"
                         height: "50dp"
-                        font_size: "2sp" 
+                        font_size: "15sp" 
                         icon_left: "hvac"
                         hint_text: "Temperatura en la salida de la caldera / entrada"
                         icon_right_color_focus: "orange"
@@ -121,7 +121,7 @@ Screen:
                         mode: "rectangle"
                         width: "250dp"
                         height: "50dp"
-                        font_size: "5sp" 
+                        font_size: "15sp" 
                         icon_left: "dots-circle"
                         hint_text: "Eficiencia de la bomba %"
                         icon_right_color_focus: "red"
@@ -132,7 +132,7 @@ Screen:
                         mode: "rectangle"
                         width: "250dp"
                         height: "50dp"
-                        font_size: "5sp" 
+                        font_size: "15sp" 
                         icon_left: "dots-square"
                         hint_text: "Eficiencia de la turbina %"
                         icon_right_color_focus: "red"
@@ -163,7 +163,7 @@ Screen:
                         # elevation: 3 #Shadow 
                         shadow_radius: 10
                         shadow_color: 1, 0.5, 0, 0.8
-                        on_press:app.validate_all_textfields()
+                        on_press:app.resolve()
 
                     MDRectangleFlatButton:
                     # MDRaisedButton:
@@ -404,24 +404,23 @@ Screen:
                     type:"small"
                     text_color: "orange"
                     halign: "center"
-                    elevation: 3 #Shadow 
+                    elevation: 3 #Shadow
                     shadow_radius: 10
                     shadow_color: 1, 0.5, 0, 0.8
-                
                 BoxLayout:
                     orientation: 'vertical'
                     spacing: dp(2)
                     padding: ('10dp', '0dp', '0dp', '0dp')
                     MDLabel:
                         id:Data_input_label
-                        text: "Y Resultado"
+                        text: "Eficiencia Termica"
                         font_size: 12
                         halign: "left"
                         size_hint_y: None
                         height: self.texture_size[1]
                         padding_y: 0
                     MDLabel:
-                        id:Y_result
+                        id:eficiencia_termica
                         text: "2453"
                         font_size: 25
                         halign: "left"
@@ -445,6 +444,14 @@ Screen:
                 padding: ('25dp', '25dp', '25dp', '25dp')
                 spacing:40
                 orientation: 'vertical'
+                MDLabel:
+                    id:trabajo_neto
+                    text: "0"
+                    font_size: 25
+                    halign: "center"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    padding_y: 15
                 MDLabel:
                     id:Data_input_label
                     text: "Trabajo Neto"
